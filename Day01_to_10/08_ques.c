@@ -17,16 +17,17 @@ Explanation: 2^5 = 2 * 2 * 2 * 2 * 2 = 32
 */
 
 #include<stdio.h>
-int power(int a, int b){
-    if(b==0){
+int power(int x, int y){
+    if(y==0){
         return 1;
     }
-    return a * power(a, b-1);
+    return x * power(x, y-1);
 }
 int main(){
-    int a, b;
-    scanf("%d %d", &a, &b);
+    int x, y;
+    scanf("%d %d", &x, &y);
 
-    printf("%d", power(a,b));
+    printf("%d", power(x,y));
     return 0;
+
 }
